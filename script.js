@@ -49,6 +49,8 @@ function getData(strFetch) {
                     document.getElementById('description').innerHTML = data.weather[0].description;
                     document.getElementById('humidity').innerHTML = 'Humidity: ' + data.main.humidity + '%';
                     document.getElementById('speed').innerHTML = 'Wind speed: ' + data.wind.speed + ' km/h';
+                    
+                    document.body.style.backgroundImage = `url('https://source.unsplash.com/1920x1080/?${data.weather[0].description.replace(/ /g, "%20")}')`; 
                 })
             }
         }
